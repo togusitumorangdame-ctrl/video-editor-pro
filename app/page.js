@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Timeline from '../components/Timeline';
 import MediaLibrary from '../components/MediaLibrary';
 import TextPanel from '../components/TextPanel';
+import EffectsPanel from '../components/EffectsPanel';
 
 export default function VideoEditor() {
   const [activeTab, setActiveTab] = useState('media');
@@ -43,7 +44,7 @@ export default function VideoEditor() {
             <h2 className="text-lg font-semibold mb-4 capitalize">{activeTab} Panel</h2>
             {activeTab === 'media' && <MediaLibrary />}
             {activeTab === 'text' && <TextPanel />}
-            {activeTab === 'effects' && <div className="text-sm text-gray-400">Effects options coming soon...</div>}
+            {activeTab === 'effects' && <EffectsPanel />}
           </section>
 
           {/* Video Preview Canvas */}
